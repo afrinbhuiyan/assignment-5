@@ -22,20 +22,34 @@
     />
     <!-- Custom Color -->
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                "gradient-color": "#00303C",
-                "bg-Secondary-color": "#F4F7FF",
-              },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "gradient-color": "#00303C",
+              "bg-Secondary-color": "#F4F7FF",
             },
           },
-        };
-      </script>  
+        },
+      };
+    </script>
     <style>
       .poppins-regular {
         font-family: "Poppins", sans-serif;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          130.7deg,
+          rgb(55, 82, 253) 0.419%,
+          rgb(108, 127, 250) 52.66%,
+          rgb(155, 168, 248) 99.733%
+        );
+      }
+      .ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     </style>
   </head>
@@ -43,21 +57,211 @@
     <header>
       <div class="navbar bg-base-100 rounded-2xl px-6 py-3">
         <div class="flex items-center gap-2 flex-1">
-            <img src="./assets/logo.png" alt="">
-          <a class="text-3xl text-gradient-color font-light">Dev<span class="font-bold">Board</span></a>
+          <img src="./assets/logo.png" alt="" />
+          <a class="text-3xl text-gradient-color font-light"
+            >Dev<span class="font-bold">Board</span></a
+          >
         </div>
         <div class="flex gap-2 items-center">
-          <div class="flex gap-4 items-center bg-bg-Secondary-color py-4 px-5 rounded-[32px]">
-            <img class="w-8 h-8" src="./assets/checkbox.png" alt="">
+          <div
+            class="flex gap-4 items-center bg-bg-Secondary-color py-4 px-5 rounded-[32px]"
+          >
+            <img class="w-8 h-8" src="./assets/checkbox.png" alt="" />
             <span class="font-bold text-3xl">28</span>
           </div>
           <div class="p-3 rounded-full bg-bg-Secondary-color">
-            <img src="./assets/theme-btn.png" alt="random colors button">
+            <img src="./assets/theme-btn.png" alt="random colors button" />
           </div>
         </div>
       </div>
     </header>
-    <main></main>
+    <main class="grid grid-cols-4 gap-6 mt-5">
+      <div class="col-span-3 p-6 bg-base-100 rounded-2xl">
+        <div
+          class="grid grid-cols-4 gap-6 border-b border-dashed border-[#3752FD33] pb-8"
+        >
+          <div
+            class="col-span-1 flex items-center gap-5 bg-bg-Secondary-color rounded-xl p-8"
+          >
+            <div class="bg-white p-4 rounded-full">
+              <img src="./assets/checkbox.png" alt="" />
+            </div>
+            <div>
+              <p class="text-gradient-color text-sm">Task Assigned</p>
+              <p class="text-gradient-color text-3xl font-bold">05</p>
+            </div>
+          </div>
+          <div
+            class="col-span-2 flex items-center bg-gradient rounded-2xl gap-6 pl-10 pr-32"
+          >
+            <img src="./assets/board.png" alt="" />
+            <p class="text-2xl text-white">Discover Something New Today!</p>
+          </div>
+          <div
+            class="col-span-1 flex items-center gap-5 bg-bg-Secondary-color rounded-xl p-8"
+          >
+            <div class="bg-white p-4 rounded-full">
+              <img src="./assets/calender.png" alt="" />
+            </div>
+            <div>
+              <p class="text-gradient-color text-xl">Wed ,</p>
+              <p class="text-gradient-color text-xl font-bold">Jul 28 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-8 mt-8">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">ShopEase</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">CloudSync</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Add Dark Mode
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Store the user's preference in localStorage, update CSS
+                variables dynamically, and apply a smooth transition effect.
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">SwiftPay</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Optimize Home page
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">Meta</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Add new emoji 🤲
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">Google LLC</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+            <p class="bg-white w-28 text-center py-2 rounded-lg">Glassdoar</p>
+            <h2 class="text-2xl font-medium text-gradient-color my-4">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-[#00000057] bg-white p-4 rounded-lg">
+              <span class="ellipsis">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
+              </span>
+            </p>
+            <div
+              class="flex items-center justify-between border-t border-dashed border-[#3752FD33] pt-3 m-3"
+            >
+              <p>
+                <span class="text-sm text-gradient-color">Deadline</span> <br />
+                <span class="font-medium text-gradient-color"
+                  >21 March 2025</span
+                >
+              </p>
+              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-1 bg-white rounded-2xl flex flex-col items-center">
+        <div class="border-b border-dashed border-[#3752FD33] w-full pb-3 mb-4 flex flex-col items-center">
+          <p class="flex items-center gap-4 justify-center mt-6">
+            <img src="./assets/activity.png" alt="" />
+            <span class="text-xl font-medium">Activity Log</span>
+          </p>
+          <button class="btn bg-blue-600 px-4 text-white mt-4 rounded-lg">
+            Clear History
+          </button>
+        </div>
+      </div>
+    </main>
     <script src="js/script.js"></script>
   </body>
 </html>
