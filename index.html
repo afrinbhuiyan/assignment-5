@@ -53,32 +53,32 @@
       }
     </style>
   </head>
-  <body class="poppins-regular px-36 pt-6 pb-16 bg-bg-Secondary-color">
+  <body class="poppins-regular px-4 lg:px-36 pt-6 pb-16 bg-bg-Secondary-color">
     <header>
       <div class="navbar bg-base-100 rounded-2xl px-6 py-3">
         <div class="flex items-center gap-2 flex-1">
-          <img src="./assets/logo.png" alt="" />
-          <a class="text-3xl text-gradient-color font-light"
+          <img class="w-6 h-6 md:w-14 md:h-14" src="./assets/logo.png" alt="" />
+          <a class="text-base md:text-3xl text-gradient-color font-light"
             >Dev<span class="font-bold">Board</span></a
           >
         </div>
         <div class="flex gap-2 items-center">
           <div
-            class="flex gap-4 items-center bg-bg-Secondary-color py-4 px-5 rounded-[32px]"
+            class="flex gap-2 md:gap-4 items-center bg-bg-Secondary-color py-2 md:py-4 px-5 rounded-[32px]"
           >
-            <img class="w-8 h-8" src="./assets/checkbox.png" alt="" />
-            <span id="complete-value-btn" class="font-bold text-3xl">23</span>
+            <img class="w-4 md:w-8 h-4 md:h-8" src="./assets/checkbox.png" alt="" />
+            <span id="complete-value-btn" class="font-bold text-xl md:text-3xl">23</span>
           </div>
-          <div id="random-color-btn" class="p-3 rounded-full bg-bg-Secondary-color">
+          <div id="random-color-btn" class="p-1 md:p-3 rounded-full bg-bg-Secondary-color">
             <img src="./assets/theme-btn.png" alt="random colors button" />
           </div>
         </div>
       </div>
     </header>
-    <main class="grid grid-cols-4 gap-6 mt-5">
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5">
       <div class="col-span-3 p-6 bg-base-100 rounded-2xl">
         <div
-          class="grid grid-cols-4 gap-6 border-b border-dashed border-[#3752FD33] pb-8"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-b border-dashed border-[#3752FD33] pb-8"
         >
           <div
             class="col-span-1 flex items-center gap-5 bg-bg-Secondary-color rounded-xl p-8"
@@ -94,10 +94,10 @@
             </div>
           </div>
           <div id="blogs"
-            class="col-span-2 flex items-center bg-gradient rounded-2xl gap-6 pl-10 pr-32"
+            class="col-span-1 lg:col-span-2 flex items-center bg-gradient rounded-2xl  gap-2 lg:gap-6 pl-2 lg:pl-10 pr-2 lg:pr-32 py-8"
           >
             <img src="./assets/board.png" alt="" />
-            <p class="text-2xl text-white">Discover Something New Today!</p>
+            <p class="text-lg lg:text-2xl text-white">Discover Something New Today!</p>
           </div>
           <div
             class="col-span-1 flex items-center gap-5 bg-bg-Secondary-color rounded-xl p-8"
@@ -111,7 +111,7 @@
             </div>
           </div>
         </div>
-        <div id="all-task-card" class="grid grid-cols-3 gap-8 mt-8">
+        <div id="all-task-card" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">ShopEase</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
@@ -264,7 +264,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1 bg-white rounded-2xl flex flex-col items-center">
+      <div class="lg:col-span-1 bg-white rounded-2xl flex flex-col items-center">
         <div
           class="border-b border-dashed border-[#3752FD33] w-full pb-3 flex flex-col items-center"
         >
