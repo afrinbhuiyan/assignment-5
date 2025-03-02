@@ -67,9 +67,9 @@
             class="flex gap-4 items-center bg-bg-Secondary-color py-4 px-5 rounded-[32px]"
           >
             <img class="w-8 h-8" src="./assets/checkbox.png" alt="" />
-            <span class="font-bold text-3xl">28</span>
+            <span id="complete-value-btn" class="font-bold text-3xl">23</span>
           </div>
-          <div class="p-3 rounded-full bg-bg-Secondary-color">
+          <div id="random-color-btn" class="p-3 rounded-full bg-bg-Secondary-color">
             <img src="./assets/theme-btn.png" alt="random colors button" />
           </div>
         </div>
@@ -88,10 +88,12 @@
             </div>
             <div>
               <p class="text-gradient-color text-sm">Task Assigned</p>
-              <p class="text-gradient-color text-3xl font-bold">05</p>
+              <p class="text-gradient-color text-3xl font-bold">
+                0<span id="task-assigned">6</span>
+              </p>
             </div>
           </div>
-          <div
+          <div id="blogs"
             class="col-span-2 flex items-center bg-gradient rounded-2xl gap-6 pl-10 pr-32"
           >
             <img src="./assets/board.png" alt="" />
@@ -104,13 +106,13 @@
               <img src="./assets/calender.png" alt="" />
             </div>
             <div>
-              <p class="text-gradient-color text-xl">Wed ,</p>
-              <p class="text-gradient-color text-xl font-bold">Jul 28 2025</p>
+              <p id="date" class="text-gradient-color text-xl">
+              </p>
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-8 mt-8">
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+        <div id="all-task-card" class="grid grid-cols-3 gap-8 mt-8">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">ShopEase</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
               Fix Mobile Button Issue
@@ -130,10 +132,12 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">CloudSync</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
               Add Dark Mode
@@ -153,10 +157,12 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">SwiftPay</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
               Optimize Home page
@@ -176,10 +182,12 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">Meta</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
               Add new emoji 🤲
@@ -199,10 +207,12 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">Google LLC</p>
             <h2 class="text-2xl font-medium text-gradient-color my-4">
               Fix Mobile Button Issue
@@ -222,12 +232,14 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
-          <div class="bg-bg-Secondary-color p-4 rounded-2xl">
+          <div class="bg-bg-Secondary-color p-4 rounded-2xl task-card">
             <p class="bg-white w-28 text-center py-2 rounded-lg">Glassdoar</p>
-            <h2 class="text-2xl font-medium text-gradient-color my-4">
+            <h2 class="text-2xl font-medium text-gradient-color my-4 title">
               Fix Mobile Button Issue
             </h2>
             <p class="text-[#00000057] bg-white p-4 rounded-lg">
@@ -245,23 +257,32 @@
                   >21 March 2025</span
                 >
               </p>
-              <button class="btn bg-blue-600 px-4 text-white">Completed</button>
+              <button class="btn bg-blue-600 px-4 text-white completed-btn">
+                Completed
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div class="col-span-1 bg-white rounded-2xl flex flex-col items-center">
-        <div class="border-b border-dashed border-[#3752FD33] w-full pb-3 mb-4 flex flex-col items-center">
+        <div
+          class="border-b border-dashed border-[#3752FD33] w-full pb-3 flex flex-col items-center"
+        >
           <p class="flex items-center gap-4 justify-center mt-6">
             <img src="./assets/activity.png" alt="" />
             <span class="text-xl font-medium">Activity Log</span>
           </p>
-          <button class="btn bg-blue-600 px-4 text-white mt-4 rounded-lg">
+          <button
+            id="clear-history"
+            class="btn bg-blue-600 px-4 text-white mt-4 rounded-lg"
+          >
             Clear History
           </button>
         </div>
+        <div id="all-history" class="mx-8"></div>
       </div>
     </main>
     <script src="js/script.js"></script>
   </body>
 </html>
+
